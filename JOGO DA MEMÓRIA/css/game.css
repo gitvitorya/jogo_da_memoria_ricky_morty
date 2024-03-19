@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+body{
+    background-image: url('../img/fundo.png'); 
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(250, 235, 215, 0.601);
+    font-size: 14px;
+    height: 50px;
+    padding: 20px;
+    
+}
+
+
+.grid{
+    display: grid;
+    width: 100%;
+    height: 50%;
+    gap: 15px;
+    max-width: 800px;
+    grid-template-columns: repeat(5, 1fr); /* determina a quantidade de colunas */
+    margin: 0 auto;
+    
+}
+
+.card{
+    aspect-ratio: 3/4;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid rgb(80, 255, 80);
+    box-sizing: cover;
+    transition: all 400ms ease;
+}
+
+.front{
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.back{
+    background-image: url('../img/back.png');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.revelar-card{
+    transform: rotateY(180deg);
+}
+
+.disabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+
+
+
